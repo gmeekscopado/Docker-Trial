@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Division_Required_For_Active</fullName>
+    <active>true</active>
+    <description>Conference and Division are required on Active Franchise records.</description>
+    <errorConditionFormula>AND(RecordType.DeveloperName = &apos;Active_Franchise&apos;, OR(ISPICKVAL(Division__c, &apos;&apos;), ISPICKVAL(Conference__c, &apos;&apos;)))</errorConditionFormula>
+    <errorDisplayField>Division__c</errorDisplayField>
+    <errorMessage>Conference and Division are required for Active Franchise records.</errorMessage>
+</ValidationRule>
