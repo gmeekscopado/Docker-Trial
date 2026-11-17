@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Founded_Year_Valid</fullName>
+    <active>true</active>
+    <description>Founded Year must be between 1920 and the current year.</description>
+    <errorConditionFormula>AND(NOT(ISBLANK(Founded_Year__c)), OR(Founded_Year__c &lt; 1920, Founded_Year__c &gt; YEAR(TODAY())))</errorConditionFormula>
+    <errorDisplayField>Founded_Year__c</errorDisplayField>
+    <errorMessage>Founded Year must be between 1920 and the current year.</errorMessage>
+</ValidationRule>
